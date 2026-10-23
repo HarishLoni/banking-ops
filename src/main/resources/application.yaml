@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: banking-ops
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bank
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:Harish@123}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+  sql:
+    init:
+      mode: always
+      continue-on-error: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
