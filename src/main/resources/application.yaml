@@ -2,7 +2,7 @@ spring:
   application:
     name: banking-ops
   datasource:
-    url: jdbc:postgresql://localhost:5432/bank
+    url: jdbc:postgresql://localhost:5432/Bank
     username: ${DB_USER:postgres}
     password: ${DB_PASSWORD:Harish@123}
   jpa:
@@ -19,3 +19,8 @@ management:
     web:
       exposure:
         include: health,info
+
+logging:
+  level:
+    org.springframework.jdbc.datasource.init: DEBUG
+    org.springframework.boot.sql.init: DEBUG
